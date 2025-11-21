@@ -1,0 +1,41 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+#GET     /                           controllers.HomeController.index()
+#
+## Map static resources from the /public folder to the /assets URL path
+#GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# Reception Service Routes
+#POST    /api/bookings                     com.hotel.reception.controllers.BookingGatewayController.createBooking
+#POST    /api/bookings/:id/checkin         com.hotel.reception.controllers.BookingGatewayController.checkIn(id)
+#POST    /api/bookings/:id/checkout        com.hotel.reception.controllers.BookingGatewayController.checkOut(id)
+#GET     /api/rooms/availability           com.hotel.reception.controllers.BookingGatewayController.getAvailability
+#GET     /api/bookings/:id                 com.hotel.reception.controllers.BookingGatewayController.getBooking(id)
+POST    /api/bookings                     com.hotel.reception.controllers.BookingGatewayController.createBooking
+#POST    /api/bookings/form                com.hotel.reception.controllers.BookingGatewayController.createBookingFromForm
+POST    /api/bookings/:id/checkin         com.hotel.reception.controllers.BookingGatewayController.checkIn(id:String)
+POST    /api/bookings/:id/checkout        com.hotel.reception.controllers.BookingGatewayController.checkOut(id:String)
+GET     /api/rooms/availability           com.hotel.reception.controllers.BookingGatewayController.getAvailability
+GET     /api/bookings/:id                 com.hotel.reception.controllers.BookingGatewayController.getBooking(id:String)
+
+#GET     /        com.hotel.reception.controllers.BookingGatewayController.health
+# UI Routes
+GET     /                   com.hotel.reception.controllers.UIController.index
+# Static Assets
+GET   /assets/*file     controllers.Assets.versioned(path="/public", file)
+
+#GET     /health                           com.hotel.reception.controllers.BookingGatewayController.health
+
+# UI Screens
+GET     /ui/checkin           com.hotel.reception.controllers.UIController.checkInPage
+GET     /ui/checkout          com.hotel.reception.controllers.UIController.checkOutPage
+GET     /ui/availability      com.hotel.reception.controllers.UIController.availabilityPage
+
+
+# Authentication
+POST    /auth/login           com.hotel.reception.controllers.AuthController.login
+
