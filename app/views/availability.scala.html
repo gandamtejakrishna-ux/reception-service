@@ -1,0 +1,17 @@
+@main("Room Availability") {
+    <h2>Room Availability</h2>
+
+    <form action="/api/rooms/availability" method="get">
+        <label>Date:</label>
+        <input type="date" name="date"/>
+
+        <label>Category:</label>
+        <select name="category">
+            <option value="Deluxe">Deluxe</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Luxury Suite">Luxury Suite</option>
+        </select>
+
+        <button type="submit">Check Availability</button>
+    </form>
+}

@@ -1,0 +1,28 @@
+@main("Guest Check-In") {
+    <h2>Guest Check-In</h2>
+    <form action="/api/bookings" method="post" enctype="multipart/form-data">
+        <label>First Name:</label>
+        <input type="text" name="firstName"/><br/>
+
+        <label>Last Name:</label>
+        <input type="text" name="lastName"/><br/>
+
+        <label>Email:</label>
+        <input type="email" name="email"/><br/>
+
+        <label>Phone:</label>
+        <input type="text" name="phone"/><br/>
+
+        <label>Category:</label>
+        <select name="category">
+            <option value="Deluxe">Deluxe</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Luxury Suite">Luxury Suite</option>
+        </select><br/>
+
+        <label>ID Proof:</label>
+        <input type="file" name="id_proof"/><br/>
+
+        <button type="submit">Check In</button>
+    </form>
+}

@@ -1,0 +1,9 @@
+@main("Guest Check-Out") {
+    <h2>Guest Check-Out</h2>
+
+    <form action="/api/bookings/checkout" method="post">
+        <label>Booking ID:</label>
+        <input type="text" name="bookingId"/>
+        <button type="submit">Check Out</button>
+    </form>
+}

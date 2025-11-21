@@ -1,0 +1,7 @@
+@(bookingId: String, respJson: play.api.libs.json.JsValue)
+@main("Check-in Success") {
+    <h2>Booking Created</h2>
+    <p>Booking ID: @bookingId</p>
+    <pre>@respJson</pre>
+    <a href="/">Back</a>
+}
